@@ -1,0 +1,806 @@
+#main {
+    height: 740px;
+    width: 100%-padding;
+    background-color: #2E2F34;
+    color: rgb(243, 243, 243);
+}
+
+#main_content {
+    margin-left: 170px;
+    margin-top: 300px;
+    padding-right: 35px;
+    /* border: 3px solid orange; */
+
+}
+
+#main_content a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s ease;
+}
+
+#main_content a:hover {
+    /* transform: scale(1.2); */
+    color: orange;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(CORBELL.TTF);
+}
+
+#main button {
+    height: 50px;
+    width: 120px;
+    font-size: 16px;
+    border: 3px solid orange;
+    background-color: transparent;
+    color: rgb(207, 134, 0);
+    transition: 0.3s ease-in-out;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Added shadow */
+    border-radius: 10px;
+}
+
+#main button:hover {
+    background-color: rgb(207, 134, 0);
+    color: white;
+}
+
+/* #imgdiv {
+    height: auto;
+    width: auto;
+    background-color: aqua;
+    margin-left: 270px;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    right: 550px;
+    }
+    
+#imgdiv img {
+    height: 800px;
+    width: 600px;
+} */
+
+#righttext {
+    height: auto;
+    /* border: 3px solid rgb(207, 134, 0); */
+    width: 500px;
+    /* background-color: rgb(0, 0, 0); */
+    position: absolute;
+    left: 1000px;
+    bottom: 130px;
+}
+
+.img-div {
+    width: 500px;
+    height: 600px;
+    left: 450px;
+    bottom: 0px;
+    border: 3px;
+    border-color: aqua;
+    position: absolute;
+    /* border: 3px solid rebeccapurple; */
+    overflow: hidden;
+    /* Ensures the image stays within the container */
+    /* transition: all 0.4s ease; */
+}
+
+.img-div img {
+    /* border: 3px solid rgb(207, 134, 0); */
+    padding-top: 50px;
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    z-index: 1;
+    /* filter: grayscale(1); */
+    /* Ensures the image covers the container */
+    /* transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease; */
+    transition: all 0.4s ease;
+    /* Smooth transition for transform */
+}
+.img-div img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 8px 16px rgb(207, 134, 0,1);
+    /* filter: grayscale(0); */
+    /* Zoom in effect */
+}
+
+/* img:hover {
+    transform: scale(1.2, 1.2);
+    transition-duration: 0.4s;
+
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main2 {
+    height: 1150px;
+    width: 100%-padding;
+    background-color: #2E2F34;
+    padding-top: 20px;
+    /* padding-left: 120px; */
+    padding-right: 35px;
+    color: rgb(243, 243, 243);
+}
+
+#main2-inside-pro {
+    display: inline-block;
+    margin-left: 130px;
+    /* border: 3px solid rgb(163, 118, 33); */
+}
+
+
+#main2-inside {
+    height: 300px;
+    width: 1200px;
+    /* background-color: rgb(207, 134, 0); */
+    /* border: 3px solid orange; */
+    border-radius: 15px;
+    /* rgb(207, 66, 0) */
+    margin: 10px;
+    margin-bottom: 20px;
+    /* position: relative; Ensure the ::before pseudo-element is positioned relative to this element
+    overflow: hidden; */
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+
+    box-shadow: 0px 4px 8px rgba(255, 217, 0, 0.6);
+    /* Added shadow */
+}
+
+
+#text-insidebox {
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 10px;
+    /* border: 3px solid orange; */
+    display: flex;
+    text-align: center;
+    /* color: black; */
+}
+
+#textonly {
+    /* margin-top: 40px; */
+    margin-bottom: 20px;
+    margin-right: 85px;
+    margin-left: 30px;
+    width: 600px;
+    text-align: left;
+    /* border: 3px solid red; */
+}
+
+#text-insidebox img {
+    width: 41%;
+    height: 300px;
+    float: right;
+    border-radius: 15px;
+}
+
+#main2-inside:hover {
+    /* background-color: rgb(207, 66, 0); */
+    /* color: white; */
+    /* transform: scale(1.2, 1.2); */
+    transform: rotateX(180deg);
+}
+
+#front,
+#back {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#front {
+    /* background-color: #e9e9e9; */
+    background-color: #42434a;
+    /* background-color: #202023; */
+    display: inline-block;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+
+#back {
+    background-color: #5a5a5a;
+    /* background-color: orange; */
+    transform: rotateX(180deg);
+    display: inline-block;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.header {
+    /* width: 1450px; */
+    width: 1250px;
+    height: 60px;
+    /* margin-left: 30px; */
+    margin-left: 110px;
+    /* padding-top: 15px; */
+    margin-right: 50px;
+    background-color: #202023;
+    position: fixed;
+    top: 0;
+    /* border: 3px solid orange; */
+    text-align: center;
+    /* display: flex;
+    justify-content: space-evenly; */
+    font-size: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    align-items: center;
+    transition: all 0.5s ease;
+    /* Smooth transition for all changes */
+    /* border: 3px solid orange; */
+    border-bottom: 3px solid orange;
+}
+
+.header.collapsed {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    /* border: none;    */
+    border-bottom: 3px solid orange;
+    margin-top: 0px;
+}
+
+.img-div1 {
+    width: 45px;
+    /* Width of the image container */
+    height: 70px;
+    /* Height of the image container */
+    margin: 0 auto;
+    /* Center the image container */
+    overflow: hidden;
+    /* Ensure the image stays within the container */
+    align-items: center;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    /* border: 3px solid orange; */
+    display: inline-block;
+    /* Align with other header content */
+    vertical-align: middle;
+    /* Align vertically with text */
+}
+
+.img-div1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the image covers the container */
+    transition: transform 0.4s ease;
+    /* Smooth transition for transform */
+}
+
+.img-div1:hover img {
+    transform: scale(1.1);
+    /* Zoom in effect */
+}
+
+/* .headerspace {
+    width: 850px;
+    float: right;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-evenly;
+    border: 3px solid orange;
+    transform: transform 0.4s ease;
+}
+
+.headerspace a:hover {
+    transform: scale(1.2);
+    color: orange;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+} */
+.headerspace {
+    width: 850px;
+    float: right;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-evenly;
+    /* border: 3px solid orange; */
+    transition: transform 0.4s ease;
+    /* Fixed this line */
+}
+
+.headerspace a {
+    text-decoration: none;
+    /* Remove underline by default */
+    color: inherit;
+    /* Inherit color from parent */
+    position: relative;
+    /* Necessary for the pseudo-element */
+    transition: color 0.4s ease;
+    /* Smooth transition for color */
+}
+
+.headerspace a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    /* Adjust thickness of the underline */
+    bottom: -2px;
+    /* Position the underline below the text */
+    left: 0;
+    background-color: orange;
+    visibility: hidden;
+    /* Initially hide the underline */
+    transform: scaleX(0);
+    /* Initially scale down the underline */
+    transition: all 0.4s ease;
+    /* Smooth transition for the underline */
+}
+
+.headerspace a:hover {
+    transform: scale(1);
+    color: orange;
+}
+
+.headerspace a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+    /* Scale up the underline */
+}
+
+
+
+#header_sample {
+    width: auto;
+    height: 10px;
+}
+
+.main3 {
+    height: 750px;
+    width: 100%-padding;
+    background-color: #42434a;
+    padding-top: 20px;
+    padding-right: 35px;
+    color: rgb(243, 243, 243);
+    /* display: flex;
+    justify-content: space-evenly; */
+    /* display: inline-block; */
+}
+
+.abouttextandimage {
+
+    display: flex;
+    /* border: 3px solid orange; */
+    /* justify-content: space-between; */
+}
+
+#about {
+    text-align: center;
+    font-size: 40px;
+    /* font-weight: bold; */
+    padding-bottom: 10px;
+    /* display: grid; */
+    padding-left: 0px;
+}
+
+.abouttextbox {
+    /* border: 3px solid orange; */
+    height: 300px;
+    width: 700px;
+    text-align: left;
+    /* margin-top: 100px; */
+    font-size: 22px;
+    /* border: 3px solid orange; */
+    margin-left: 70px;
+    margin-top: 80px;
+}
+
+.aboutprogressbox {
+    /* border: 3px solid orange; */
+    height: 480px;
+    /* border: 3px solid orange; */
+    width: 500px;
+    overflow: hidden;
+    margin-left: 120px;
+}
+
+.aboutprogressbox p {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 50px;
+}
+
+/* .aboutimagebox img {
+    height: 100%;
+    width: 100%;
+} */
+
+/* .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+} */
+
+.progress-container {
+    width: 400px;
+    height: 30px;
+    background-color: #d3d3d3;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    width: 85%;
+    /* 80% filled */
+    height: 100%;
+    background-color: orange;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    z-index: 1;
+}
+
+#typing-effect {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid orange;
+    animation: typing 2s steps(20, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* @keyframes typing {
+    from { width: 0; }
+    to { width: 24%; }
+} */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 24%;
+    }
+
+    100% {
+        width: 24%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+/* .skills {
+    height: 900px;
+    width: calc(100% - 35px);
+    background-color: #42434a;
+    padding-top: 20px;
+    padding-right: 35px;
+    color: rgb(243, 243, 243);
+    overflow: hidden; 
+} */
+
+/* .skills-card-holder {
+    height: 330px;
+    width: 1100px;
+    margin-left: 210px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+/* .skills-card {
+    height: 300px;
+    width: 350px;
+    border: 3px solid orange;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 10px;
+    border-radius: 15px; 
+    opacity: 0; 
+    position: relative; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+}*/
+
+/* .skills-card[data-direction="left"] {
+    animation-name: slide-in-left;
+    animation-delay: 0.5s; /* Adjust delay for each card as needed */
+/* } */
+
+/* .skills-card[data-direction="right"] {
+    animation-name: slide-in-right;
+    animation-delay: 1s; /* Adjust delay for each card as needed */
+/* } */
+
+/* .skills-card[data-direction="bottom"] {
+    animation-name: slide-in-bottom;
+    animation-delay: 1.5s; /* Adjust delay for each card as needed
+} */
+
+/* .skills-card:hover {
+    transform: scale(1.5);
+    background-color: orange;
+    color: #2E2F34;
+} */
+
+/* Keyframes for sliding in from the left */
+/* @keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} */
+
+/* Keyframes for sliding in from the right */
+/* @keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} */
+
+/* Keyframes for sliding in from the bottom */
+/* @keyframes slide-in-bottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
+
+.skills {
+    height: 900px;
+    width: 100%-padding;
+    background-color: #42434a;
+    padding-top: 20px;
+    padding-right: 35px;
+    color: rgb(243, 243, 243);
+    /* display: flex;
+    justify-content: space-evenly; */
+    /* display: inline-block; */
+}
+
+.skills-card-holder {
+    height: 330px;
+    width: 1100px;
+    /* border: 3px solid red; */
+    margin-left: 210px;
+    /* margin: 10px; */
+    display: flex;
+
+}
+
+.skills-card {
+    height: 300px;
+    width: 350px;
+    /* border: 3px solid orange; */
+    text-align: center;
+    background-color: #2E2F34;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Added shadow */
+    transition: transform 1s ease, background-color 0.3s ease, color 0.3s ease !important;
+    /* Smooth transition for color and transform */
+}
+
+.skills-card-holder-pro {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35px;
+}
+
+.skills-card img {
+    width: 100px;
+    padding-top: 50px;
+    height: 100px;
+}
+
+.skills-card:hover {
+    transform: scale(1.1) !important;
+    /* Slightly scale up for effect */
+    background-color: rgb(237, 154, 0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Stronger shadow on hover */
+    color: #2E2F34;
+    /* Darker text color for contrast */
+}
+
+.textinside-skillscard {
+    font-size: larger;
+    font-weight: 900px;
+    padding-top: 20px;
+    width: 283px;
+    height: 100px;
+    margin: 25px;
+    /* border: 3px solid rebeccapurple; */
+}
+
+.contact {
+    height: 720px;
+    width: 100%-padding;
+    background-color: #2E2F34;
+    padding-top: 20px;
+    /* padding-left: 120px; */
+    /* background-color: #202023; */
+    padding-right: 35px;
+    display: flex;
+    color: rgb(243, 243, 243);
+}
+
+.left-contact {
+    width: 450px;
+    height: 400px;
+    /* border: 3px solid orange; */
+    margin-top: 70px;
+    border-radius: 15px;
+    padding-top: 50px;
+    padding-left: 40px;
+    font-family: sans-serif !important;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-left: 70px;
+    transition: background-color 0.4s ease !important;
+}
+
+.left-contact:hover {
+    background-color: #202023;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.left-contact-img {
+    display: flex;
+    font-size: medium;
+    margin-bottom: 20px;
+    font-weight: 500;
+    /* border: 3px solid orange; */
+}
+
+.left-contact-img img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-form {
+    /* border: 3px solid red; */
+    margin-left: 80px;
+    padding-top: 40px;
+    margin-top: 70px;
+    background-color: #202023;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding-left: 50px;
+    align-items: center;
+    width: 800px;
+    height: 550px;
+}
+
+.contact-form-level {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.contact-form-message {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.contact-form-message input {
+    width: 587px !important;
+    height: 100px !important;
+}
+
+.contact-form-level button {
+    width: 100px;
+    margin-left: 330px;
+    height: 50px;
+    font-size: larger;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    background-color: #202023;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.contact-form-level button:hover {
+    transform: scale(1.1) !important;
+    /* Slightly scale up for effect */
+    background-color: rgb(237, 154, 0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form label {
+    font-size: x-large;
+    margin-right: 25px;
+}
+
+.contact-form input {
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    margin-right: 50px;
+    transition: border 0.5s ease;
+    ;
+}
+
+.contact-form input:focus {
+    border: 3px solid orange;
+    outline: none;
+}
